@@ -1,73 +1,288 @@
-<html class="full-height" lang="en-US">
+<html><head><style type="text/css">
 
-<head>
-  <title>My Drive - Google Drive</title>
-  <link rel="icon" href="https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_4.ico">
-  <meta charset="UTF-8">
-  <link href="./css/bootstrap.min.css" rel="stylesheet">
-  <link href="./css/primary.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/main.js"></script>
+  body {
+    visibility: visible !important;
 
-</head>
+  }
 
-<body>
-  <nav class="navbar white-text navbar-expand-lg navbar-dark fixed-top" id="navbar">
-    <div class="container"><a class="navbar-brand" href="index.html"><strong>Orduna For The Juicy People</strong></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link waves-effect waves-light" href="/">Go Home</a></li>
-          <li class="nav-item"><a class="nav-link waves-effect waves-light" href="./selection3.html">Games</a></li>
-          <li class="nav-item"><a class="nav-link waves-effect waves-light" href="./selection2.html">Watch Movies/TV</a></li>
-          <li class="nav-item"><a class="nav-link waves-effect waves-light" href="./contributors.html">Staff & Contributors</a></li>
-        </ul>
-        <a class="btn btn-primary btn-rounded my-0 waves-effect waves-light" href="https://github.com/titaniumnetwork-dev" target="_blank">Check us out on Github!</a>
+  #inline {
+    color: #fff !important;
+    text-decoration: underline !important;
+    border-bottom: none !important;
+  }
+
+  .blocked-logo {
+    width: 120px !important;
+  }
+
+  .school-logo {
+    height: auto;
+  }
+
+  .school-logo img {
+    margin: 10px;
+    max-height: 110px;
+  }
+
+  /*DETAILS STYLE*/
+  #inline_content {
+    width: 400px;
+    padding: 30px 0px;
+    margin: 0px auto;
+    background: #fff;
+    text-align: left;
+    border-radius: 10px;
+  }
+
+  .block-details {
+    margin-top: 0px;
+    color: #f1746e;
+    text-align: center;
+    width: 100%;
+  }
+
+  .evt_row {
+    border-top: 1px #ebebeb solid;
+    height: 40px;
+    line-height: 35px;
+  }
+
+  .evt_lc {
+    margin-left: 60px !important;
+    font-weight: normal !important;
+  }
+
+  .evt_rc {
+    font-weight: bold !important;
+    display: initial !important;
+  }
+
+  .blockpage_section {
+    margin: auto
+  }
+
+  .evt_rc.url {
+    margin-top: 10px;
+    height: 25px;
+    width: 160px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block !important;
+    white-space: nowrap;
+  }
+
+  .close-btn-holder {
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .close-btn {
+    color: #fff;
+    background: #f1746e;
+    border: none;
+  }
+
+  .button.mfp-close {
+    overflow: visible;
+    cursor: pointer;
+    margin: 10px auto !important;
+    background: #f1746e !important;
+    border: 0;
+    -webkit-appearance: none;
+    display: block !important;
+    outline: none;
+    padding: 0;
+    z-index: 1046;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  .mfp-close {
+    width: 100px;
+    height: auto;
+    line-height: 30px;
+    position: relative !important;
+    text-decoration: none;
+    text-align: center;
+    opacity: 1 !important;
+    padding: 0px !important;
+    border-radius: 5px !important;
+    color: white;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 16px !important;
+    font-family: inherit;
+  }
+
+  .mfp-close:hover, .mfp-close:focus {
+    opacity: 1;
+  }
+
+  .mfp-close:active {
+    top: 1px;
+  }
+
+  .evt_row {
+    width: auto;
+  }
+
+  .evt_lc {
+    width: 100px;
+    display: inline-block;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0 5px 0;
+  }
+
+  .evt_rc {
+    width: 600px;
+    display: inline-block;
+  }
+
+  #inline-content, #inline-close {
+    display: none
+  }
+
+  #inline-content {
+    display: block;
+    position: absolute;
+    top: calc(50% + 90px);
+    left: 10%;
+  }
+
+  #inline-content.fullscreen {
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+
+  #inline-close {
+    font-size: 14px;
+    color: #fff
+  }
+
+  .details {
+    font-size: 14px;
+    display: none;
+    line-height: 22px
+  }
+
+  .details span {
+    word-break: break-all
+  }
+
+  /*QADUX-116*/
+  .partner-logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+</style>
+
+<script type="text/javascript" language="javascript" src="/js/vendor/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" href="/css/colorbox.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="app/css/login-layouts.css">
+
+<!--BEGIN BLOCKED TEMPLATE-->
+</head><body data-gr-c-s-loaded="true" style=""><div class="blocked-page businessbg">
+  <img src="/assets/img/logo.svg" class="blocked-logo">
+
+  
+  <!--GEO LOCATION BLOCKED-->
+  
+  <!-- ==========================================================================
+          Blocked kids full page - html starts
+  ========================================================================== -->
+  <!--IF CONTACT ADMIN TWL AND LOGIN ARE OFF-->
+    <div class="row full-blocked-page">
+    <!-- <div class="col-sm-12 left-bg-img center-text block-bg"> -->
+    <div class="col-sm-12 left-bg-img center-text block-bg">
+    <!-- QADUX-116 -->
+          <a href="/">
+        <img src="app/images/logo.svg" alt="Securly" title="Securly" class="logo">
+      </a>
+    
+    <section id="blockMessage" style="margin-top: -74px;">
+      <h1>Page Blocked!</h1>
+
+      <!-- QADUX-117 -->
+      <p>This page has been blocked in accordance with the OrdunaNetwork Policy.  Please contact the helpdesk for further assistance.  Thanks!      </p><div class="clearfix"></div>
+              <a href="#" id="inline">Details</a>
+            <p></p>
+    </section>
+
+    <div id="inline-content" class="fullscreen" style="display: none; top: 506.5px;">
+      <div class="details" style="display: none;">
+        <span>Policy: </span><span>OrdunaNetwork Staff</span>
+      </div>
+      <div class="details" style="display: none;"><span>Category: </span><span>Proxy</span></div>
+      <div class="details" style="display: none;"><span>Keyword: </span><span></span>
+      </div>
+      <div class="details" style="display: none;"><span>Reason: </span><span>under construction</span></div>
+      <div class="details" style="display: none;"><span>URL: </span><span>https://firebouylen.herokuapp.com/externalserver2.html</span>
       </div>
     </div>
-  </nav>
-  <div class="spacefromtop">
-    <div class="container">
-      <div class "wow white-text" style="visibility:visible">
-      <div class="c-box">
-        <center>
-          <h3>External Node Server</h3>
-        </center>
-        <center>
-						<form action="" method="get" id="web-search-box" style="transform:scale(1.1)">
-							<p>
-								<input type="text" placeholder="Enter URL" style="border:none;border-radius: 5px;padding:10px;" id="url" name="url" />&nbsp;
-								<input type="submit" style="border:none;border-radius: 5px;padding:10px;width:40px;background:#704ea0;color:#fff;font-weight:bold;" value="GO" />
-							</p>
-						</form>
-        </center>
-        <div class="d-box">
-        <center><h4>Features:</h4></center>
-        <h5>You can:
-        <h6>-Play YouTube videos by putting 'https://invidio.us/' in the above bar!
-        <h6>-Play blocked IO games.</h6>
-        <h6>-View webpages that require lots of scripting to function.</h6>
-        <h6>-Use sites that require the use of WebSocket.io to function.</h6>
-        <center><h5><a href="contact.html"><font color="white">If you have any issues, be sure to contact staff by clicking here</font></a></h6>
-        </div>
-      </div>
-      <script>
-        function $(id) {
-          return document.getElementById(id);
-        }
-        $('web-search-box').onsubmit = function() {
-          var url = $('url').value;
-          //this is the URL for the server
-          window.location.href = `http://www.bigblockchevy.ml/sopN5Tn4MhD1Fw4uCvuqLxYUOBq2grMkWlhpRGOAvh8h63KcsbCm9QSy2EQIuHFOyE9uUjnPnZqnzGVBmR6nVaPCjSXonpabd8EwDidfhLXQSEF32bAb0wVtN9gWPCUi6qfyOFbRKe61EHQMUH808HdoBaAEpSui2L37oNOgQswYluuICWV1qgjHMlaYVRqJ7pbB11gUEviBBatFrxnu3qVJLpR5rxEGN840ZmFFpUrFVkrtjtrkcERUCvzhellQB2SmwdRfYjkGfHKNlW9XfF12OmLoW0xjIpO8nWlhMCRq0C5tGxzCZmJFSY609FY6zdBma0gToNGG3URhPDQhNOnT2JtvT0dWRTLoZJ3dIpKRENNR25rXQDhH9edmVk5uMtQ6NuUOQBXQKJnErqYK1xkH2RoNw4PcOdTp7gAkFyrliafOydcrAFDffWekCDEKXgA6wJtXSQPC0nYOcjjAAz7rVdFDP9nSbBCBPEzwkaug5jVx8fLR/${url}`;
-          return false;
-        };
-        window.onload = function() {
-          $('url').focus();
-        }
-      </script>
+
+    <!-- QADUX-116 -->
+    
+  </div>
+  <!-- QADUX-116 -->
+      <div class="col-sm-12 text-center">
+      <img src="https://media3.giphy.com/media/CYU3D3bQnlLIk/source.gif" alt="School Logo" class="bottom-logo">
     </div>
+  
+</div>
+
+
   </div>
-  </div>
-  </div>
-</body>
-</html>
+<script>
+  $(document).ready(function () {
+    var detailsOpen = false;
+    var blockMessageHeight = $('#blockMessage').height();
+    var bodyHeight = $('body').height();
+    if (bodyHeight < 1000) {
+      console.log('short')
+      $('#blockMessage').css('margin-top', '-74px')
+    } else {
+      console.log('tall');
+    }
+    $('#inline').on('click', function () {
+      if (detailsOpen == false) {
+        setInlineContentPosition();
+        $('#inline-content').css('display', 'block');
+        $('.details').css('display', 'block');
+        $('#inline-close').css('display', 'inline-block');
+        detailsOpen = true;
+      } else {
+        $('#inline-content').css('display', 'none');
+        $('.details').css('display', 'none');
+        $('#inline-close').css('display', 'none');
+        detailsOpen = false;
+      }
+
+    });
+
+    $(window).resize(setInlineContentPosition);
+  });
+
+  function setInlineContentPosition() {
+    var bmt = $('#blockMessage').position().top + $('#blockMessage').height();
+    bmt += parseFloat($('#blockMessage').css('margin-top'));
+    $('#inline-content').css('top', bmt);
+  }
+</script>
+
+
+
+
+<!--END BLOCKED TEMPLATE-->
+<!--DETAILS SECTION-->
+
+</body></html>
