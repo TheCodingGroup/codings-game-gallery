@@ -1,0 +1,31 @@
+TEXT_GAMEOVER  = "Anne Boonchuy is tonight's winner";
+TEXT_LOSE = "YOU LOST BECAUSE ";
+TEXT_LOSE2 = " WON";
+TEXT_SCORE     = "FROG CURRENCY: ";
+TEXT_RESTART   = "PLAY AGAIN";
+TEXT_MOVES      = "MOVES";
+TEXT_ARE_SURE = "Game Paused";
+TEXT_SELECT_PLAYERS = "Select the number of CPUs";
+TEXT_SELECT_COLOR = "Select a character ";
+TEXT_TUTORIAL1 = "Hello and welcome to True Colors. The game is like UNO but Amphibia themed.";
+TEXT_TUTORIAL2 = "Manual Coming Soon";
+TEXT_TUTORIAL3 = "Manual Coming Soon";
+TEXT_TUTORIAL4 = "Manual Coming Soon";
+TEXT_TUTORIAL5 = "Manual Coming Soon";
+TEXT_TUTORIAL6 = "Manual Coming Soon";
+TEXT_TUTORIAL7 = "Manual Coming Soon";
+TEXT_PLAYER_1 = "Anne";
+TEXT_PLAYER_2 = "Sprig";
+TEXT_PLAYER_3 = "Marcy";
+TEXT_PLAYER_4 = "Sasha";
+TEXT_ALERT_1 = "Whoops! You need to say MARCY IS DEAD when there is only 1 card left. Take these 2 cards as a punishment.";
+var TEXT_PRELOADER_CONTINUE = "START";
+
+
+TEXT_SHARE_IMAGE = "200x200.jpg";
+TEXT_SHARE_TITLE = "Congratulations!";
+TEXT_SHARE_MSG1 = "You collected <strong>";
+TEXT_SHARE_MSG2 = " points</strong>!<br><br>Share your score with your friends!";
+TEXT_SHARE_SHARE1 = "My score is ";
+TEXT_SHARE_SHARE2 = " points! Can you do better";
+
