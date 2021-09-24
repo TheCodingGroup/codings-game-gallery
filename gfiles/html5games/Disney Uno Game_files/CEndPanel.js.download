@@ -88,8 +88,8 @@ function CEndPanel(oSpriteBg){
         }else{
             iScore = 0;
             _iScore = 0;
-            _oMsgTextBack.text = TEXT_LOSE+iPlayerWin+TEXT_LOSE2;
-            _oMsgText.text = TEXT_LOSE+iPlayerWin+TEXT_LOSE2;
+            _oMsgTextBack.text = TEXT_LOSE2;
+            _oMsgText.text = TEXT_LOSE2;
         }
         
         _oScoreTextBack.text = TEXT_SCORE +": "+iScore;
