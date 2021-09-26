@@ -140,8 +140,8 @@ function CEndPanel(oSpriteBg,iWinner){
         }else{
             iScore = 0;
             _iScore = 0;
-            _oMsgTextBack.text = TEXT_LOSE+iPlayerWin+TEXT_LOSE2;
-            _oMsgText.text = TEXT_LOSE+iPlayerWin+TEXT_LOSE2;
+            _oMsgTextBack.text = TEXT_LOSE2;
+            _oMsgText.text = TEXT_LOSE2;
         }
         
         if (s_b2Players===true){
