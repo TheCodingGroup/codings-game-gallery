@@ -31,7 +31,7 @@ function CCreditsPanel(){
         _pStartPanelPos = {x: _oPanelContainer.x, y: _oPanelContainer.y};
         new createjs.Tween.get(_oPanelContainer).to({y:CANVAS_HEIGHT/2 - 40},500, createjs.Ease.quartIn);
 
-        var oTitle = new createjs.Text("BROUGHT TO YOU BY CBC KIDS"," 60px "+PRIMARY_FONT, "#ffffff");
+        var oTitle = new createjs.Text("Sattar Games"," 60px "+PRIMARY_FONT, "#ffffff");
         oTitle.y = -oSprite.height/2 + 170;
         oTitle.textAlign = "center";
         oTitle.textBaseline = "middle";
