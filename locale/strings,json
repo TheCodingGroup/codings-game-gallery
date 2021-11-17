@@ -1,0 +1,311 @@
+{
+	"GameTitle": {
+		"en-us": "Molly McGee"
+	},
+	"PauseMenu": {
+		"en-us": "MENU"
+	},
+	"Exit": {
+		"en-us": "Exit"
+	},
+	"ConfirmQuit": {
+		"en-us": "Are you sure you want to exit? All\n progress will be lost."
+	},
+	"Loading": {
+		"en-us": "Loading..."
+	},
+	"Success": {
+		"en-us": "Success!"
+	},
+	"ComingSoon": {
+		"en-us": "Coming Soon!"
+	},
+	"Complete": {
+		"en-us": "COMPLETE!"
+	},
+	"Resume": {
+		"en-us": "Resume"
+	},
+	"Help": {
+		"en-us": "Help"
+	},
+	"LevelSelectTitle": {
+		"en-us": "BOO-NANZA!"
+	},
+	"ConfirmResetHeader": {
+		"en-us": "Erase All Progress?"
+	},
+	"ConfirmResetMessage": {
+		"en-us": "Are you sure you want\nto erase all progress?"
+	},
+	"Story": {
+		"en-us": "Story"
+	},
+	"StoryIntro1": {
+		"en-us": "The mayor has put Molly in charge of running\na talent week at the Brighton Band Shell!"
+	},
+	"StoryIntro2": {
+		"en-us": "Turns out keeping the crowd happy in Brighton\nis harder than Molly imagined!"
+	},
+	"StoryIntro3": {
+		"en-us": "Enlist the help of Scratch to complete tasks,\nsolve problems, and keep the crowd happy\nto make this talent week one for the ages!"
+	},
+	"Skip": {
+		"en-us": "SKIP"
+	},
+	"GreatJob": {
+		"en-us": "Great Job!"
+	},
+	"TryAgain": {
+		"en-us": "TRY AGAIN"
+	},
+	"TotalSnacks": {
+		"en-us": "TOTAL SNACKS"
+	},
+	"Pause": {
+		"en-us": "PAUSE"
+	},
+	"Time": {
+		"en-us": "TIME"
+	},
+	"Snacks": {
+		"en-us": "SNACKS"
+	},
+	"Performance": {
+		"en-us": "PERFORMANCE"
+	},
+	"Day": {
+		"en-us": "DAY "
+	},
+	"DayFailed": {
+		"en-us": "You failed to keep the crowd happy\n before the end of the day!"
+	},
+	"FoodCollected": {
+		"en-us": "Food Collected:\n%F"
+	},
+	"Upgrade": {
+		"en-us": "UPGRADE!"
+	},
+	"FoodRequirment": {
+		"en-us": "x"
+	},
+	"FixerAbilityName": {
+		"en-us": "Phantom\nFixer"
+	},
+	"FixerAbilityDescription": {
+		"en-us": "Scratch tries to fix an\narea that needs help!\n Success Rate: %N%!"
+	},
+	"FlyersAbilityName": {
+		"en-us": "Coupon\nCrafter"
+	},
+	"FlyersAbilityDescriptionSingular": {
+		"en-us": "Scratch makes %N\nCoupon for you!"
+	},
+	"FlyersAbilityDescriptionPlural": {
+		"en-us": "Scratch makes %N\nCoupons for you!"
+	},
+	"MoodAbilityName": {
+		"en-us": "Happy\nHaunting"
+	},
+	"MoodAbilityDescription": {
+		"en-us": "Scratch stops the\nMood Meter from\ndecreasing for\n%N seconds!"
+	},
+	"Level": {
+		"en-us": "Level %N"
+	},
+	"GameComplete": {
+		"en-us": "Good work! You’ve made it through talent week in one piece and\nkept the town's spirit alive along the way! Earn three stars on each\nday to unlock an Encore!"
+	},
+	"GameCompleteEndurance": {
+		"en-us": "Amazing work! You’ve pulled off the best show in Brighton! Move\nover Tugbottoms, there’s a new name in town!"
+	},
+	"Score": {
+		"en-us": "Score: %N"
+	},
+	"HighScore": {
+		"en-us": "High Score: %N"
+	},
+	"NewHighScore": {
+		"en-us": "New High Score: %N"
+	},
+	"AcapellaGroup": {
+		"en-us": "ACAPELLA GROUP"
+	},
+	"TriangleTrio": {
+		"en-us": "THE TRIANGLE TRIO"
+	},
+	"FleaBittenMutts": {
+		"en-us": "THE FLEA BITTEN MUTTS"
+	},
+	"AtomicPink": {
+		"en-us": "ATOMIC PINK"
+	},
+	"KennyStar": {
+		"en-us": "KENNY STAR"
+	},
+	"EnduranceLevel": {
+		"en-us": "ENCORE!"
+	},
+	"PowerOutage": {
+		"en-us": "CONNECT THE PLUGS!"
+	},
+	"TrashPickup": {
+		"en-us": "PICK UP TRASH!"
+	},
+	"DonutTruck": {
+		"en-us": "SERVE CUSTOMERS!"
+	},
+	"IceCreamTruck": {
+		"en-us": "SERVE CUSTOMERS!"
+	},
+	"Admissions": {
+		"en-us": "CLEAR THE LINE!"
+	},
+	"SoundBoard": {
+		"en-us": "FIX THE FADERS!"
+	},
+	"Scratch's": {
+		"en-us": "Scratch's"
+	},
+	"HauntedHelp": {
+		"en-us": "Haunted Help"
+	},
+	"Continue": {
+		"en-us": "Continue"
+	},
+	"TutCoupons1": {
+		"en-us": "Day one of Brighton's Band Shell Boo-nanza is a go! Let's rock and roll!"
+	},
+	"TutCoupons2": {
+		"en-us": "Rock and roll? I hate to break it to ya, kiddo, but the crowd isn’t doing much rocking or rolling."
+	},
+	"TutCoupons3": {
+		"en-us": "Sure, Brighton's Acapella Group isn't Kenny Star, but they've got spunk! And were extremely cheap to book…"
+	},
+	"TutCoupons4": {
+		"en-us": "Acapella alone won't keep the crowd happy! You've gotta give them something they'll love!"
+	},
+	"TutCoupons5": {
+		"en-us": "Bring out a magician! Or a daredevil. Or a daredevil magician! You get the point."
+	},
+	"TutCoupons6": {
+		"en-us": "Oh! I've got an idea! We can make coupons!"
+	},
+	"TutCoupons7": {
+		"en-us": "...come again?"
+	},
+	"TutCoupons8": {
+		"en-us": "Coupons! Everyone loves a bargain! And what's a better bargain than discounts at local Brighton businesses?!"
+	},
+	"TutCoupons9": {
+		"en-us": "Stimulating the local economy? Now that's sure to bring some happiness!"
+	},
+	"TutCouponsHeader": {
+		"en-us": "Make coupons for the crowd!"
+	},
+	"TutCouponsBody": {
+		"en-us": "Tap the table to walk over and start making coupons! You can only hold a few coupons at a time!"
+	},
+	"TutCouponsGoal": {
+		"en-us": "Goal: Give each crowd member a coupon!"
+	},
+	"TutGuestsHeader": {
+		"en-us": "Deliver coupons to the crowd!"
+	},
+	"TutGuestsBody": {
+		"en-us": "Tap a crowd member to give them a coupon! Deliver coupons to build happiness!"
+	},
+	"TutFix1": {
+		"en-us": "I did it! Look at the crowd! They're so happy!"
+	},
+	"TutFix2": {
+		"en-us": "The crowd? You mean the McGee's? Where's the rest of Brighton?"
+	},
+	"TutFix3": {
+		"en-us": "They'll be here! The Band Shell will be bumping with Brightonians! We just need to fix a few things around here first!"
+	},
+	"TutFixHeader": {
+		"en-us": "Keep the Band Shell Running!"
+	},
+	"TutFixBody1": {
+		"en-us": "Broken stations have a yellow or red icon above them. Stations with a red icon deplete your happiness meter!"
+	},
+	"TutFixBody2": {
+		"en-us": "Tap a broken station or its icon to visit it! Complete its activity to fix it and restore happiness!"
+	},
+	"TutFixGoal": {
+		"en-us": "Goal: Fix the broken stations!"
+	},
+	"TutMood1": {
+		"en-us": "Alright! The Band Shell is back in business! Now to sit back, relax, and enjoy our success!"
+	},
+	"TutMood2": {
+		"en-us": "Uhh, Molly...?"
+	},
+	"TutMood3": {
+		"en-us": "What is it, Scratch?"
+	},
+	"TutMood4": {
+		"en-us": "All the new crowd members look... grumpy? Annoyed? Exasperated? No, let's go with grumpy. You should get back out there!"
+	},
+	"TutMoodHeader": {
+		"en-us": "Save the Day!"
+	},
+	"TutMoodBody": {
+		"en-us": "Max out the crowd happiness meter before time runs out to complete the day!"
+	},
+	"TutMoodGoal": {
+		"en-us": "Goal: Deliver coupons & fix stations\nto max out the happiness meter!"
+	},
+	"TutFood1": {
+		"en-us": "Ya know, Scratch, a little help here would be nice!"
+	},
+	"TutFood2": {
+		"en-us": "I've seen what you're doing, and it is NOT for me, thank you!"
+	},
+	"TutFood3": {
+		"en-us": "Okay, I guess I'll just have to give all this extra delicious greasy food I keep finding to Darryl then!"
+	},
+	"TutFood4": {
+		"en-us": "Wait, what? Slow down there, Molly. I was joking. It was a joke! Just a ghost joke! It's what we do!"
+	},
+	"TutFood5": {
+		"en-us": "Tell you what, snatch me enough snacks, and I might just be willing to help!"
+	},
+	"TutScratchHeader": {
+		"en-us": "The Hungry Ghost!"
+	},
+	"TutScratchBody": {
+		"en-us": "Collect food to unlock Scratch's abilities! Tap an ability's icon to activate it!"
+	},
+	"TutEncore": {
+		"en-us": "Welcome to the Band Shell Encore! Keep everything in working order for as long as you can. The show keeps rockin' while the crowd is happy!"
+	},
+	"TutSuperfood": {
+		"en-us": "Does Scratch need some extra persuasion? Collect Super Tacos to instantly charge him up!"
+	},
+	"MaxedOut": {
+		"en-us": "Max!"
+	},
+	"ScratchMeterReminder": {
+		"en-us": "Get fixing McGee!\nThe Band Shell needs your help!"
+	},
+	"ScratchCouponReminder": {
+		"en-us": "You gotta make more coupons, kiddo!"
+	},
+	"ScratchTimeReminder": {
+		"en-us": "The day is almost over! Get moving!"
+	},
+	"ScratchCouldntFix": {
+		"en-us": "Sorry, McGee! I couldn't fix it!"
+	},
+	"Awesome": {
+		"en-us": "AWESOME!"
+	},
+	"GoodWork": {
+		"en-us": "GOOD WORK!"
+	},
+	"EncoreMode": {
+		"en-us": "ENCORE MODE"
+	}
+}
