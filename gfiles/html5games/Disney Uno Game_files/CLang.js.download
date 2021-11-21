@@ -1,7 +1,7 @@
 TEXT_GAMEOVER  = "YOU WON!";
 TEXT_LOSE = "YOU LOST BECAUSE ";
 TEXT_LOSE2 = " YOU LOST!";
-TEXT_SCORE     = "FROG CURRENCY";
+TEXT_SCORE     = "SCORE";
 TEXT_RESTART   = "PLAY AGAIN";
 TEXT_MOVES      = "MOVES";
 TEXT_ARE_SURE = "Game Paused";
@@ -16,8 +16,8 @@ TEXT_TUTORIAL6 = "Manual Coming Soon";
 TEXT_TUTORIAL7 = "Manual Coming Soon";
 TEXT_PLAYER_1 = "Anne";
 TEXT_PLAYER_2 = "Sprig";
-TEXT_PLAYER_3 = "Marcy";
-TEXT_PLAYER_4 = "Sasha";
+TEXT_PLAYER_3 = "Polly";
+TEXT_PLAYER_4 = "Hop Pop";
 TEXT_ALERT_1 = "Whoops! You need to say MARCY IS DEAD when there is only 1 card left. Take these 2 cards as a punishment.";
 var TEXT_PRELOADER_CONTINUE = "START";
 
