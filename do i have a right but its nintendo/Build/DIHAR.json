@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "DIHAR.data.unityweb",
+"asmCodeUrl": "DIHAR.asm.code.unityweb",
+"asmMemoryUrl": "DIHAR.asm.memory.unityweb",
+"asmFrameworkUrl": "DIHAR.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
