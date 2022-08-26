@@ -32,15 +32,7 @@ function CAreYouSurePanel(oFunction) {
         _pStartPanelPos = {x: _oPanelContainer.x, y: _oPanelContainer.y};
         new createjs.Tween.get(_oPanelContainer).to({y:CANVAS_HEIGHT/2 - 40},500, createjs.Ease.quartIn);
         
-        var oTitleStroke = new createjs.Text(TEXT_ARE_SURE," 54px "+PRIMARY_FONT, "#000000");
-        oTitleStroke.y = -oSprite.height/2 + 120;
-        oTitleStroke.textAlign = "center";
-        oTitleStroke.textBaseline = "middle";
-        oTitleStroke.lineWidth = 400;
-        oTitleStroke.outline = 5;
-        _oPanelContainer.addChild(oTitleStroke);
-
-        var oTitle = new createjs.Text(TEXT_ARE_SURE," 54px "+PRIMARY_FONT, "#FFFFFF");
+        var oTitle = new createjs.Text(TEXT_ARE_SURE," 54px "+PRIMARY_FONT, "#000000");
         oTitle.y = oTitleStroke.y;
         oTitle.textAlign = "center";
         oTitle.textBaseline = "middle";
