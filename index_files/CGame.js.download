@@ -485,7 +485,7 @@ function CGame(oData){
                 }
             }else{
                 _bInputUpdate = false;
-                setTimeout(this.afterGoal,2000);
+                setTimeout(this.afterGoal,500);
             }
         }
         
