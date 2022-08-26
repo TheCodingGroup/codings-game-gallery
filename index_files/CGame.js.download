@@ -475,7 +475,7 @@ function CGame(oData){
             _oInterface.refreshPlayersScore(_iPlayer1Points,_iPlayer2Points);
             this.showGoalText(0);
             if (_iPlayer1Points===POINTS_TO_WIN){
-                setTimeout (function(){s_oGame.gameOver(0)},TIME_GOAL_ANIMATION);
+                setTimeout (function(){s_oGame.gameOver(0)},500);
                 
                 if (s_bFriendly===false){
                     if (s_iLastLevel<s_oLevelSettings.getNextLevel()){
@@ -497,10 +497,10 @@ function CGame(oData){
             _oInterface.refreshPlayersScore(_iPlayer1Points,_iPlayer2Points);
             this.showGoalText(1);
             if (_iPlayer2Points===POINTS_TO_WIN){
-                setTimeout (function(){s_oGame.gameOver(1)},TIME_GOAL_ANIMATION);
+                setTimeout (function(){s_oGame.gameOver(1)},500);
             }else{
                 _bInputUpdate = false;
-                setTimeout(this.afterGoal,TIME_GOAL_ANIMATION);
+                setTimeout(this.afterGoal,500);
             }
         }
     };
