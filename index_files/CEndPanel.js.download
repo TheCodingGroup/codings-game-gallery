@@ -31,13 +31,7 @@ function CEndPanel(oSpriteBg,iWinner){
         _oBg.regY = oBgInfo.height/2;
         _oBg.x = CANVAS_WIDTH/2;
         _oBg.y = CANVAS_HEIGHT/2;
-        
-	_oMsgTextBack = new createjs.Text(""," 52px "+PRIMARY_FONT, "#000");
-        _oMsgTextBack.x = CANVAS_WIDTH/2 +1;
-        _oMsgTextBack.y = (CANVAS_HEIGHT/2)-140;
-        _oMsgTextBack.textAlign = "center";
-        _oMsgTextBack.textBaseline = "alphabetic";
-        _oMsgTextBack.lineWidth = 550;
+      
 
         _oMsgText = new createjs.Text(""," 52px "+PRIMARY_FONT, "#ffffff");
         _oMsgText.x = CANVAS_WIDTH/2;
@@ -50,12 +44,6 @@ function CEndPanel(oSpriteBg,iWinner){
         _oMsgText.textBaseline = "alphabetic";
         _oMsgText.lineWidth = 550;
         
-        _oScoreTextBack = new createjs.Text(""," 37px "+PRIMARY_FONT, "#000");
-        _oScoreTextBack.x = CANVAS_WIDTH/2 +1;
-        _oScoreTextBack.y = (CANVAS_HEIGHT/2) + 30;
-        _oScoreTextBack.textAlign = "center";
-        _oScoreTextBack.textBaseline = "alphabetic";
-        _oScoreTextBack.lineWidth = 550;
         
         _oScoreText = new createjs.Text(""," 37px "+PRIMARY_FONT, "#ffffff");
         _oScoreText.x = CANVAS_WIDTH/2;
@@ -133,29 +121,24 @@ function CEndPanel(oSpriteBg,iWinner){
         var iPlayerWin = iWinner + 1;
         
         if (iWinner===0){
-            _oMsgTextBack.text = TEXT_GAMEOVER;
             _oMsgText.text = TEXT_GAMEOVER;
             //_oMsgText.y = (CANVAS_HEIGHT/2)-30;
             //_oMsgTextBack.y = (CANVAS_HEIGHT/2)-28;
         }else{
             iScore = 0;
             _iScore = 0;
-            _oMsgTextBack.text = TEXT_LOSE2;
             _oMsgText.text = TEXT_LOSE2;
         }
         
         if (s_b2Players===true){
-            _oMsgTextBack.text = TEXT_WIN_2PLAYERS+iPlayerWin+TEXT_WIN_2PLAYERS_2;
             _oMsgText.text = TEXT_WIN_2PLAYERS+iPlayerWin+TEXT_WIN_2PLAYERS_2;
         }
         
         if (!s_bFriendly){
             $(s_oMain).trigger("end_level",s_oLevelSettings.getCurrentLevel());
-            _oScoreTextBack.text = TEXT_SCORE +": "+iScore;
             _oScoreText.text = TEXT_SCORE +": "+iScore;
             
             if (s_oLevelSettings.getCurrentLevel()===s_oLevelSettings.getNumLevel()-1){
-                _oMsgText.text = TEXT_WIN_TOURNAMENT;
                 _oMsgTextBack.text = TEXT_WIN_TOURNAMENT;
             }
             
