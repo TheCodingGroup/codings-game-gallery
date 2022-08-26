@@ -531,7 +531,7 @@ function CGame(oData){
                     playSound("miss_goal",1,false);
                 }
             new createjs.Tween.get(_oGoalText).to({scaleX:0.8,scaleY:0.8,alpha:1},900,createjs.Ease.cubicOut)
-                    .wait(1300)
+                    .wait(100)
                     .to({scaleX: 0, scaleY: 0, alpha:0},300,createjs.Ease.cubicIn)
                     .call(function(){s_oStage.removeChild(_oGoalText,shape);});
     };
