@@ -28,7 +28,7 @@ function CMsgBox(szText,oParentContainer){
         oBg.regY = oSpriteBg.height * 0.5;
         _oContainer.addChild(oBg);
 
-        _oMsg = new createjs.Text(TEXT_ERR_LS, "40px " + PRIMARY_FONT, "#fff");
+        _oMsg = new createjs.Text(TEXT_ERR_LS, "40px " + PRIMARY_FONT, "#000000");
         _oMsg.x = CANVAS_WIDTH / 2;
         _oMsg.y = 360;
         _oMsg.textAlign = "center";
