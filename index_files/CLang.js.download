@@ -1,5 +1,5 @@
 TEXT_SCORE     = "SCORE";
-TEXT_ARE_SURE = "Game Paused";
+TEXT_ARE_SURE = "Quit game?";
 TEXT_GAMEOVER = "YOU WON!";
 TEXT_LOSE = "PLAYER ";
 TEXT_LOSE2 = " YOU LOST!";
