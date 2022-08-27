@@ -33,7 +33,6 @@ function CAreYouSurePanel(oFunction) {
         new createjs.Tween.get(_oPanelContainer).to({y:CANVAS_HEIGHT/2 - 40},500, createjs.Ease.quartIn);
         
         var oTitle = new createjs.Text(TEXT_ARE_SURE," 54px "+PRIMARY_FONT, "#000000");
-        oTitle.y = oTitleStroke.y;
         oTitle.textAlign = "center";
         oTitle.textBaseline = "middle";
         oTitle.lineWidth = 400;
