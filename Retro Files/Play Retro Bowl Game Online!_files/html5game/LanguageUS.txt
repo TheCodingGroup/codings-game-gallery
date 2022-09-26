@@ -1,8 +1,8 @@
 msg_Update	Thank you for updating Retro Bowl!##Kickoffs are a new feature for players that have upgraded to the unlimited version. Meanwhile replays and the player Hall of Fame are now free for everyone.##Thank you for your continued support.##- Simon
-ui_NewStarGames	New Star Games
+ui_NewStarGames	SATTAR GAMES
 ui_Back	Back
 ui_Home	Home
-ui_Dilemma	Dilemma
+ui_Dilemma	Conflict
 ui_Continue	Continue
 ui_Play	Play
 ui_Message	Message
@@ -40,13 +40,13 @@ quarter_2	2nd Qtr
 quarter_3	3rd Qtr
 quarter_4	4th Qtr
 quarter_5	OT
-match_Touchdown	Touchdown
-match_Interception	Interception
-match_Incomplete	Incomplete
-match_OutOfBounds	Out of bounds
+match_Touchdown	TD Play
+match_Interception	Bad Pass, Intercept
+match_Incomplete	Bad Pass, Incomplete
+match_OutOfBounds	Play Over OB
 match_Sacked	Sacked
 match_Fumble	Fumble
-comm_stage_KickOff	$teamname kicks off
+comm_stage_KickOff	Kick Off $teamname 
 comm_stage_Possession_OwnHalf1	$teamname on their own $num
 comm_stage_Possession_OwnHalf2	$teamname in their own half
 comm_stage_Possession_OwnHalf3	$teamname has possession
@@ -56,55 +56,55 @@ comm_stage_Possession_OppHalf3	$teamname has possession
 comm_stage_Possession_RedZone	$teamname in the red zone
 comm_stage_Possession_BackedUp	$teamname deep in their own half
 comm_stage_Possession_Halfway	$teamname has it in midfield
-comm_stage_PuntReturnGood	That's a good return
-comm_stage_PuntReturnShort	It's a short return
-comm_stage_DriveRun0	They run the ball
-comm_stage_DriveRun1	They keep it on the ground
-comm_stage_DriveRun2	The quarterback hands it off
-comm_stage_DriveRun3	The running back takes it
-comm_stage_DriveRun4	It's a running play
-comm_stage_DrivePass0	They go for the pass
-comm_stage_DrivePass1	They throw the ball
-comm_stage_DrivePass2	It's a throw over the middle
-comm_stage_DrivePass3	It's a passing play
-comm_stage_DrivePass4	The quarterback throws it
-comm_stage_DriveHailMary0	It's a hail mary throw
-comm_stage_DriveHailMary1	It's a huge throw
-comm_stage_DriveHailMary2	The quarterback airs it out
-comm_stage_Turnover1	It's a fumble!
-comm_stage_Turnover2	Interception!
-comm_stage_TurnoverHuman	$teamname turn it over
+comm_stage_PuntReturnGood	Long Return
+comm_stage_PuntReturnShort	Short Return
+comm_stage_DriveRun0  Running the ball!
+comm_stage_DriveRun1	Running the ball. Hopefully they get something good.
+comm_stage_DriveRun2	Quarterback hands to running back. Let's see what happens.
+comm_stage_DriveRun3	The Running back has the ball and makes a good play.
+comm_stage_DriveRun4	Running play they decide. Will they make a good run?
+comm_stage_DrivePass0	Pass the ball
+comm_stage_DrivePass1	Throwing it
+comm_stage_DrivePass2	Throw the ball
+comm_stage_DrivePass3	Passing it
+comm_stage_DrivePass4	Quarterback pass
+comm_stage_DriveHailMary0	A Hail Mary Throw
+comm_stage_DriveHailMary1	Huge Throw
+comm_stage_DriveHailMary2	Quarterback make a very big throw
+comm_stage_Turnover1	Your Team Force A Fumble!
+comm_stage_Turnover2	Intercepted By Your Team!
+comm_stage_TurnoverHuman	Turnover $teamname
 comm_stage_TurnoverHuman4th	$teamname turn it over on 4th down
 comm_stage_Touchdown	$teamname score!
-comm_stage_Punt	$teamname punt
+comm_stage_Punt	They Can't Make A Good Play So They Punt
 comm_stage_PAT1	Point after touchdown...
 comm_stage_PAT2_Missed	Missed!
 comm_stage_PAT2_Scored	Scored!
-comm_stage_FieldGoal1	$teamname with a $num yard field goal...
-comm_stage_FieldGoal2_Missed	Missed!
-comm_stage_FieldGoal2_Scored	Scored!
+comm_stage_FieldGoal1	$teamname FGA
+comm_stage_FieldGoal2_Missed	Miss
+comm_stage_FieldGoal2_Scored	Yes
 comm_stage_end_quarter1	End of 1st quarter
 comm_stage_end_quarter2	End of 1st half
 comm_stage_end_quarter3	End of 3rd quarter
-comm_stage_end_quarter4	Game over
+comm_stage_end_quarter4	End of Game
 comm_stage_overtime	Overtime!
-comm_stage_overtime_over	Game over
+comm_stage_overtime_over	Final
 comm_stage_2pt_attempt	They go for 2 points...
-comm_stage_2pt_missed	But get stopped!
+comm_stage_2pt_missed	And don't score!
 comm_stage_2pt_scored	And score!
 comm_stage_Turnover_Tackle1	[$pos] $playername makes a great tackle!
-comm_stage_Turnover_Tackle2	[$pos] $playername makes the tackle!
-comm_stage_Turnover_Fumble1	[$pos] $playername forces a fumble!
+comm_stage_Turnover_Tackle2	[$pos] $playername make the Tackle!
+comm_stage_Turnover_Fumble1	[$pos] $playername force a Fumble!
 comm_stage_Turnover_Fumble2	[$pos] $playername punches it out for a fumble!
 comm_stage_Turnover_Sack1	[$pos] $playername sacks the quarterback!
 comm_stage_Turnover_Sack2	[$pos] $playername with a huge sack!
 comm_stage_Turnover_Interception1	[$pos] $playername makes an interception!
 comm_stage_Turnover_Interception2	[$pos] It's an interception by $playername!
-comm_stage_failed_skill	[$pos] $playername missed the tackle
-comm_stage_failed_speed	[$pos] $playername was too slow
-comm_stage_failed_strength	[$pos] $playername wasn't strong enough
-comm_stage_incomplete_Run	It's short of the 1st down
-comm_stage_incomplete_Pass	Incomplete
+comm_stage_failed_skill	OOF! MISS TACKLE
+comm_stage_failed_speed	OOF! TOO SLOW
+comm_stage_failed_strength	OOF! TOO WEAK
+comm_stage_incomplete_Run	Incompleted....and Short 1st Down
+comm_stage_incomplete_Pass	Incompleted! Bad Pass!
 comm_stage_GoForIt	$teamname is going for it on 4th down
 down_1	1st down
 down_2	2nd down
@@ -116,8 +116,8 @@ down_3and	3rd &
 down_4and	4th &
 Goal	Goal
 Inches	Inches
-match_GetReady	Get Ready!
-game_Title	Retro Bowl
+match_GetReady	Ready to play?
+game_Title	Sattar Football Game
 qualification_NO	Not Possible
 qualification_MAYBE	Possible
 qualification_PO	Playoffs
