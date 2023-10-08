@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'univers_lt_53_extendedbold';
-    src: url('univers_lt_53_extended_bold-webfont.woff2') format('woff2'),
-         url('univers_lt_53_extended_bold-webfont.woff') format('woff');
+    src: url('https://thecodinggroup.github.io/codings-game-gallery/font/2023/univers_lt_53_extended_bold-webfont.woff2') format('woff2'),
+         url('https://thecodinggroup.github.io/codings-game-gallery/font/2023/univers_lt_53_extended_bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
