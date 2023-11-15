@@ -1,137 +1,85 @@
-<html>
-	<head>
-		<title>My Drive - Google Drive</title>
-		<link rel="icon" href="https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_4.ico">
-	</head>
-</html>
-
 <?php
+session_start(); //Start session for settings of proxy to be stored and recovered
+require("includes/class.censorDodge.php"); //Load censorDodge class
+$proxy = new censorDodge(@$_GET["cdURL"], true, true); //Instantiate censorDodge class
 
-define('PROXY_START', microtime(true));
+//Clear cookies and resetting settings session
+if (isset($_GET["clearCookies"])) { $proxy->clearCookies(); echo '<meta http-equiv="refresh" content="0; url='.cdURL.'">'; }
+if (isset($_POST["resetSettings"])) { unset($_SESSION["settings"]); echo '<meta http-equiv="refresh" content="0; url='.cdURL.'">'; }
 
-require("vendor/autoload.php");
+$settings = $proxy->getProxySettings(); //Get all settings (plugins included) that are user intractable
 
-use Proxy\Http\Request;
-use Proxy\Http\Response;
-use Proxy\Plugin\AbstractPlugin;
-use Proxy\Event\FilterEvent;
-use Proxy\Config;
-use Proxy\Proxy;
+//Update settings in session for changing in proxy later
+if (isset($_POST["updateSettings"])) {
+    foreach ($settings as $setting) {
+        if (isset($proxy->{$setting[0]})) {
+            $_SESSION["settings"][$setting[0]] = isset($_POST[$setting[0]]); //Store settings in session for later
+            $proxy->{$setting[0]} = isset($_POST[$setting[0]]); //Update proxy instance settings
+        }
+    }
 
-// start the session
-session_start();
-
-// load config...
-Config::load('./config.php');
-
-// custom config file to be written to by a bash script or something
-Config::load('./custom_config.php');
-
-if(!Config::get('app_key')){
-	die("app_key inside config.php cannot be empty!");
+    echo '<meta http-equiv="refresh" content="0; url='.cdURL.'">'; //Reload page using META redirect
+}
+else {
+    foreach ($settings as $setting) {
+        if (isset($proxy->{$setting[0]}) && isset($_SESSION["settings"][$setting[0]])) {
+            $proxy->{$setting[0]} = $_SESSION["settings"][$setting[0]]; //Update proxy instance settings
+        }
+    }
 }
 
-if(!function_exists('curl_version')){
-	die("cURL extension is not loaded!");
+//Find any templates which can be used as themes components
+$templates = array(); foreach(glob(BASE_DIRECTORY."plugins".DS."{**/*,*}",GLOB_BRACE) as $file) { if (preg_match("~([a-z0-9\_\-]+)\.cdTheme~i",$file,$m)) { $templates[$m[1]] = $file; } }
+if (@$templates["error"]) { set_exception_handler(function($e) use ($proxy,$settings,$templates) { if ($errorString=$e->getMessage()) { include("".$templates["error"].""); }}); }
+if (@$templates["miniForm"]) { ob_start(); include("".$templates["miniForm"].""); $output = ob_get_contents(); ob_end_clean(); $proxy->addMiniFormCode($output); }
+
+if (!@$_GET["cdURL"]) { //Only run if no URL has been submitted
+    if (!@$templates["home"]) {
+        echo "<html><head><title>".ucfirst(strtolower($_SERVER['SERVER_NAME']))." - Censor Dodge ".$proxy->version."</title></head><body>"; //Basic title
+
+        //Basic submission form with base64 encryption support
+        echo "
+        <script>function goToPage() { event.preventDefault(); var URL = document.getElementsByName('cdURL')[0].value; if (URL!='') { window.location = '?cdURL=' + ".($proxy->encryptURLs ? 'btoa(URL)' : 'URL')."; } }</script>
+        <h2>Welcome to <a target='_blank' style='color:#000 !important;' href='https://www.censordodge.com/'>Censor Dodge ".$proxy->version."</a></h2>
+        <form action='#' method='GET' onsubmit='goToPage();'>
+            <input type='text' size='30' name='cdURL' placeholder='URL' required>
+            <input type='submit' value='Go!'>
+        </form>";
+
+        echo "<hr><h3>Proxy Settings:</h3><form action='".cdURL."' method='POST'>";
+        foreach($settings as $name => $setting) { //Toggle option for setting listed in array, completely dynamic
+            echo '<span style="padding-right:20px;"><input type="checkbox" '.($proxy->{$setting[0]} ? "checked" : "") .' name="'.$setting[0].'" value="'.$setting[1].'"> '.$name."</span>";
+        }
+        echo "<br><input style='margin-top: 20px;' type='submit' name='updateSettings' value='Update Settings'><form action='".cdURL."' method='POST'><input style='margin-left: 5px;' type='submit' value='Reset' name='resetSettings'></form></form>";
+
+        $file = $proxy->parseLogFile(date("d-m-Y").".txt"); //Parse log file of current date format
+        echo "<hr><h3>Pages Viewed Today (Total - ".count($file)." By ".count($proxy->sortParsedLogFile($file, "IP"))." Users):</h3>";
+
+        if (count($views = $proxy->sortParsedLogFile($file, "URL"))>0) {
+            echo "<table><thead><td><b>Website</b></td><td><b>View Count</b></td></thead>"; //Table title
+            foreach($views as $URL => $logs)  {
+                echo "<tr><td style='padding-right: 80px;'>".$URL."</td><td>".count($logs)."</td></tr>"; //Table row for each parsed log
+            }
+            echo "</table>";
+        }
+        else {
+            echo "<p>No pages have been viewed yet today!</p>"; //No logs in file so just display generic message
+        }
+
+        if (file_exists($proxy->cookieDIR)) {
+            echo "<hr><h3>Cookie File - <a href='?clearCookies'>[Delete File]</a>:</h3>"; //Option to delete file
+            echo "<p style='word-wrap: break-word;'>".nl2br(wordwrap(trim(file_get_contents($proxy->cookieDIR)),190,"\n",true))."</p>"; //Output cookie file to screen
+        }
+        else {
+            echo "<hr><h3>Cookie File:</h3>";
+            echo "<p>No cookie file could be found!</p>"; //No file found so just display generic message
+        }
+        echo "</body></html>";
+    }
+    else {
+        include("".$templates["home"]."");
+    }
 }
-
-// how are our URLs be generated from this point? this must be set here so the proxify_url function below can make use of it
-if(Config::get('url_mode') == 2){
-	Config::set('encryption_key', md5(Config::get('app_key').$_SERVER['REMOTE_ADDR']));
-} else if(Config::get('url_mode') == 3){
-	Config::set('encryption_key', md5(Config::get('app_key').session_id()));
+else {
+    echo $proxy->openPage(); //Run proxy with URL submitted when proxy class was instantiated
 }
-
-// very important!!! otherwise requests are queued while waiting for session file to be unlocked
-session_write_close();
-
-// form submit in progress...
-if(isset($_POST['url'])){
-	
-	$url = $_POST['url'];
-	$url = add_http($url);
-	
-	header("HTTP/1.1 302 Found");
-	header('Location: '.proxify_url($url));
-	exit;
-	
-} else if(!isset($_GET['q'])){
-
-	// must be at homepage - should we redirect somewhere else?
-	if(Config::get('index_redirect')){
-		
-		// redirect to...
-		header("HTTP/1.1 302 Found"); 
-		header("Location: ".Config::get('index_redirect'));
-		
-	} else {
-		echo render_template("./templates/main.php", array('version' => Proxy::VERSION));
-	}
-
-	exit;
-}
-
-// decode q parameter to get the real URL
-$url = url_decrypt($_GET['q']);
-
-$proxy = new Proxy();
-
-// load plugins
-foreach(Config::get('plugins', array()) as $plugin){
-
-	$plugin_class = $plugin.'Plugin';
-	
-	if(file_exists('./plugins/'.$plugin_class.'.php')){
-	
-		// use user plugin from /plugins/
-		require_once('./plugins/'.$plugin_class.'.php');
-		
-	} else if(class_exists('\\Proxy\\Plugin\\'.$plugin_class)){
-	
-		// does the native plugin from php-proxy package with such name exist?
-		$plugin_class = '\\Proxy\\Plugin\\'.$plugin_class;
-	}
-	
-	// otherwise plugin_class better be loaded already through composer.json and match namespace exactly \\Vendor\\Plugin\\SuperPlugin
-	$proxy->getEventDispatcher()->addSubscriber(new $plugin_class());
-}
-
-try {
-
-	// request sent to index.php
-	$request = Request::createFromGlobals();
-	
-	// remove all GET parameters such as ?q=
-	$request->get->clear();
-	
-	// forward it to some other URL
-	$response = $proxy->forward($request, $url);
-	
-	// if that was a streaming response, then everything was already sent and script will be killed before it even reaches this line
-	$response->send();
-	
-} catch (Exception $ex){
-
-	// if the site is on server2.proxy.com then you may wish to redirect it back to proxy.com
-	if(Config::get("error_redirect")){
-	
-		$url = render_string(Config::get("error_redirect"), array(
-			'error_msg' => rawurlencode($ex->getMessage())
-		));
-		
-		// Cannot modify header information - headers already sent
-		header("HTTP/1.1 302 Found");
-		header("Location: {$url}");
-		
-	} else {
-	
-		echo render_template("./templates/main.php", array(
-			'url' => $url,
-			'error_msg' => $ex->getMessage(),
-			'version' => Proxy::VERSION
-		));
-		
-	}
-}
-
-?>
