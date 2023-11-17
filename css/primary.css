@@ -102,3 +102,6 @@ header {
 li.nav-item {
     margin-right: 102px;
 }
+.ml-auto, .mx-auto {
+    margin-left: 305px;
+}
