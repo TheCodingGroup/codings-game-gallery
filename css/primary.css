@@ -99,3 +99,6 @@ header {
     margin-left: 159px;
     margin-right: 5px;
 }
+li.nav-item {
+    margin-right: 102px;
+}
